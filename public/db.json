@@ -1,0 +1,60 @@
+{
+  "accounts": [
+    {
+      "id": "a1",
+      "type": "checking",
+      "ownerName": "Emma Davies",
+      "balance": 1500.5,
+      "photoUrl": "https://randomuser.me/api/portraits/women/62.jpg",
+      "number": "e21259619c94c57e"
+    },
+    {
+      "id": "a2",
+      "type": "savings",
+      "ownerName": "Waldemar Schnell",
+      "balance": 8400.0,
+      "photoUrl": "https://randomuser.me/api/portraits/men/70.jpg",
+      "number": "469c67618c19b2e9"
+    },
+    {
+      "id": "a3",
+      "type": "checking",
+      "ownerName": "Victoria Christensen",
+      "balance": 200.0,
+      "photoUrl": "https://randomuser.me/api/portraits/women/46.jpg",
+      "number": "80544bcc9150cd15"
+    },
+    {
+      "id": "a4",
+      "type": "savings",
+      "ownerName": "Madame Francesca",
+      "balance": 700.0,
+      "photoUrl": "https://randomuser.me/api/portraits/women/56.jpg",
+      "number": "7a6c31cb93da43b9"
+    },
+    {
+      "id": "a5",
+      "type": "checking",
+      "ownerName": "Natanael Rocha",
+      "balance": 3250.0,
+      "photoUrl": "https://randomuser.me/api/portraits/men/54.jpg",
+      "number": "e4b69d42f4eeb17d"
+    },
+    {
+      "id": "a6",
+      "type": "savings",
+      "ownerName": "Victor Sørensen",
+      "balance": 560.0,
+      "photoUrl": "https://randomuser.me/api/portraits/men/57.jpg",
+      "number": "a49980a0d90186c5"
+    },
+    {
+      "id": "a7",
+      "type": "savings",
+      "ownerName": "Maria Jensen",
+      "balance": 950.0,
+      "photoUrl": "https://randomuser.me/api/portraits/women/63.jpg",
+      "number": "a63f911d2d242b01"
+    }
+  ]
+}

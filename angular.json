@@ -33,9 +33,7 @@
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ],
-            "polyfills": [
-              "@angular/localize/init"
-            ]
+            "polyfills": []
           },
           "configurations": {
             "production": {
@@ -87,12 +85,8 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "polyfills": [
-              "@angular/localize/init"
-            ]
+            "styles": ["src/styles.scss"],
+            "polyfills": []
           }
         }
       }
