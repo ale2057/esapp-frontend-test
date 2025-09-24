@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+:root[data-bs-theme="light"] {
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #212529;
+}
+
+:root[data-bs-theme="dark"] {
+  --bs-body-bg: #121212;
+  --bs-body-color: #f8f9fa;
+}
