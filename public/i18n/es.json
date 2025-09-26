@@ -27,5 +27,8 @@
   "history.filter-sl-all": "-- Todo --",
   "history.filter-min-amount": "Monto mínimo",
   "history.filter-max-amount": "Monto máximo",
-  "history.filter-btn-clear": "Limpiar"
+  "history.filter-btn-clear": "Limpiar",
+  "btc.table-time": "Hora",
+  "btc.table-price": "Precio",
+  "btc.table-volume": "Monto"
 }

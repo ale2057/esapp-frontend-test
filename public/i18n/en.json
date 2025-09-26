@@ -27,5 +27,8 @@
   "history.filter-sl-all": "-- All --",
   "history.filter-min-amount": "Min. amount",
   "history.filter-max-amount": "Max. amount",
-  "history.filter-btn-clear": "Clear"
+  "history.filter-btn-clear": "Clear",
+  "btc.table-time": "Time",
+  "btc.table-price": "Price",
+  "btc.table-volume": "Volume"
 }

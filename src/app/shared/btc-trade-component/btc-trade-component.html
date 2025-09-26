@@ -1,0 +1,33 @@
+<div class="card my-3">
+  <div class="card-body">
+    <h3 class="card-title"><i class="bi bi-currency-bitcoin"></i> BTC/USDT</h3>
+    <h4 class="card-subtitle mb-2 text-body-secondary">Binance</h4>
+    <div class="row">
+      <div class="col-md-4 d-flex align-items-center">
+        @if (lastTrade$ | async; as lastTrade) {
+        <h1>{{ lastTrade.p | number : "1.2-2" }}</h1>
+        }
+      </div>
+      <div class="col-md-8">
+        <table class="table">
+          <thead>
+            <tr>
+              <th translate>btc.table-time</th>
+              <th translate>btc.table-price</th>
+              <th translate>btc.table-volume</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (trade of trades$|async; track $index) {
+            <tr>
+              <td>{{ trade.t | date : "HH:mm:ss" }}</td>
+              <td>{{ trade.p | number : "1.2-2" }}</td>
+              <td>{{ trade.v }}</td>
+            </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
