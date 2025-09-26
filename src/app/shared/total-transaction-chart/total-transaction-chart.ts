@@ -11,23 +11,15 @@ import { TranslateDirective } from '@ngx-translate/core';
   styleUrl: './total-transaction-chart.scss',
 })
 export class TotalTransactionChart implements OnInit {
-  barChartType: ChartType = 'line';
+  totalCount: number = 0;
+  barChartType: ChartType = 'bar';
   barChartDate: string[] = [];
   barChartTotal: number[] = [];
-  barChartData: ChartData<'line'> = {
+  barChartData: ChartData<'bar'> = {
     labels: [],
     datasets: [{ data: [], label: '' }],
   };
   barChartOptions: ChartConfiguration['options'] = {
-    elements: {
-      line: {
-        tension: 0.4,
-      },
-      point: {
-        radius: 6,
-        hoverRadius: 8,
-      },
-    },
     plugins: {
       legend: { display: true },
     },
@@ -36,9 +28,10 @@ export class TotalTransactionChart implements OnInit {
   constructor(private transactionService: TransactionService) {}
 
   ngOnInit(): void {
-    const totals = this.transactionService.lastFiveTotalsByDate();
+    const totals = this.transactionService.totalTransactionsByDate();
+    this.totalCount = this.transactionService.totalTransactionsCount();
     this.barChartDate = totals.map((t) => t.date);
-    this.barChartTotal = totals.map((t) => t.total);
+    this.barChartTotal = totals.map((t) => t.count);
     this.barChartData = {
       labels: this.barChartDate,
       datasets: [{ data: this.barChartTotal, label: 'Total' }],

@@ -57,6 +57,10 @@ export class TransactionService {
     });
   }
 
+  totalAmountCount() {
+    return this._transactions().reduce((s, t) => s + t.amount, 0);
+  }
+
   lastFiveTotalsByDate() {
     const grouped: Record<string, number> = {};
     for (const t of this._transactions()) {
@@ -68,5 +72,24 @@ export class TransactionService {
       date,
       total: grouped[date],
     }));
+  }
+
+  totalTransactionsCount(): number {
+    return this._transactions().length;
+  }
+
+  totalTransactionsByDate() {
+    const grouped: Record<string, number> = {};
+    for (const t of this._transactions()) {
+      const date = t.date.slice(0, 10);
+      grouped[date] = (grouped[date] ?? 0) + 1;
+    }
+    return Object.keys(grouped)
+      .sort((a, b) => b.localeCompare(a))
+      .slice(0, 5)
+      .map((date) => ({
+        date,
+        count: grouped[date],
+      }));
   }
 }

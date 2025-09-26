@@ -31,5 +31,6 @@
   "btc.table-time": "Time",
   "btc.table-price": "Price (USDT)",
   "btc.table-volume": "Volume",
-  "total-chart.title": "Total transactions"
+  "total-chart.title": "Total transactions",
+  "amount-chart.title": "Money transferred"
 }

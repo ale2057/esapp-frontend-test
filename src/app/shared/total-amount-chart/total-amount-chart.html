@@ -1,10 +1,10 @@
 <div class="card my-3">
   <div class="card-body">
     <h3 class="card-title" translate>
-      <i class="bi bi-bar-chart"></i> total-chart.title
+      <i class="bi bi-graph-up"></i> amount-chart.title
     </h3>
     <h4 class="card-subtitle mb-2 text-body-secondary">
-      Total: {{ totalCount }}
+      Total: {{ totalAmount | number : "1.2-2" }}
     </h4>
     <canvas
       baseChart
