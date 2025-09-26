@@ -45,7 +45,7 @@
     <button
       type="button"
       class="btn btn-success btn-md"
-      [disabled]="invTransaction"
+      [disabled]="invTransaction || exceedBalance"
       (click)="createTransaction()"
       translate
     >
