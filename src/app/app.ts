@@ -7,7 +7,6 @@ import { ToastContainerComponent } from './shared/toast-container-component/toas
   selector: 'app-root',
   imports: [RouterOutlet, NavbarComponent, ToastContainerComponent],
   templateUrl: './app.html',
-  styleUrl: './app.scss',
 })
 export class App {
   protected readonly title = signal('esapp-frontend-test');

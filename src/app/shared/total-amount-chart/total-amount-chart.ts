@@ -9,7 +9,6 @@ import { CommonModule } from '@angular/common';
   selector: 'app-total-amount-chart',
   imports: [BaseChartDirective, TranslateDirective, CommonModule],
   templateUrl: './total-amount-chart.html',
-  styleUrl: './total-amount-chart.scss',
 })
 export class TotalAmountChart {
   totalAmount: number = 0;

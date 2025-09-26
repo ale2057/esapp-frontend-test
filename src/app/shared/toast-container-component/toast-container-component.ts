@@ -8,7 +8,6 @@ import { TranslateDirective } from '@ngx-translate/core';
   selector: 'app-toast-container-component',
   imports: [CommonModule, TranslateDirective],
   templateUrl: './toast-container-component.html',
-  styleUrl: './toast-container-component.scss',
 })
 export class ToastContainerComponent {
   toasts: ToastMessage[] = [];

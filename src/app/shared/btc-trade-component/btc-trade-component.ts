@@ -10,7 +10,6 @@ import { TranslateDirective } from '@ngx-translate/core';
   selector: 'app-btc-trade-component',
   imports: [CommonModule, TranslateDirective],
   templateUrl: './btc-trade-component.html',
-  styleUrl: './btc-trade-component.scss',
 })
 export class BtcTradeComponent implements OnInit, OnDestroy {
   trades: Trade[] = [];

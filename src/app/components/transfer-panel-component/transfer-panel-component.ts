@@ -12,7 +12,6 @@ import { TransactionService } from '../../services/transaction-service';
   selector: 'app-transfer-panel-component',
   imports: [TranslateDirective, AccountCardComponent],
   templateUrl: './transfer-panel-component.html',
-  styleUrl: './transfer-panel-component.scss',
 })
 export class TransferPanelComponent {
   private balance = 0;

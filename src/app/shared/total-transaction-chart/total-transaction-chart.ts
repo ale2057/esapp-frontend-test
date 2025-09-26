@@ -8,7 +8,6 @@ import { TranslateDirective } from '@ngx-translate/core';
   selector: 'app-total-transaction-chart',
   imports: [BaseChartDirective, TranslateDirective],
   templateUrl: './total-transaction-chart.html',
-  styleUrl: './total-transaction-chart.scss',
 })
 export class TotalTransactionChart implements OnInit {
   totalCount: number = 0;

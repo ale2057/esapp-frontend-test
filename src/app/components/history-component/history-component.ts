@@ -11,7 +11,6 @@ import { Account } from '../../models/account-model';
   selector: 'app-history-component',
   imports: [DecimalPipe, DatePipe, TranslateDirective, FormsModule],
   templateUrl: './history-component.html',
-  styleUrl: './history-component.scss',
 })
 export class HistoryComponent implements OnInit {
   today = new Date();

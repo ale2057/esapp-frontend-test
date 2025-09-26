@@ -7,7 +7,6 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   selector: 'app-navbar-component',
   imports: [TranslateDirective, RouterLink, RouterLinkActive],
   templateUrl: './navbar-component.html',
-  styleUrl: './navbar-component.scss',
 })
 export class NavbarComponent {
   constructor(private themeService: ThemeService) {}

@@ -8,7 +8,6 @@ import { Account } from '../../models/account-model';
   selector: 'app-most-active-account-component',
   imports: [TranslateDirective],
   templateUrl: './most-active-account-component.html',
-  styleUrl: './most-active-account-component.scss',
 })
 export class MostActiveAccountComponent implements OnInit {
   accuntData: Account | undefined;

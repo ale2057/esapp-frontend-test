@@ -8,7 +8,6 @@ import { DecimalPipe } from '@angular/common';
   selector: 'app-account-card-component',
   imports: [TranslateDirective, FormsModule, DecimalPipe],
   templateUrl: './account-card-component.html',
-  styleUrl: './account-card-component.scss',
 })
 export class AccountCardComponent {
   @Input() cardTitle = '';

@@ -13,6 +13,5 @@ import { MostActiveAccountComponent } from '../../shared/most-active-account-com
     MostActiveAccountComponent,
   ],
   templateUrl: './dashboard-component.html',
-  styleUrl: './dashboard-component.scss',
 })
 export class DashboardComponent {}
