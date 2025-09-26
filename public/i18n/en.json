@@ -29,6 +29,6 @@
   "history.filter-max-amount": "Max. amount",
   "history.filter-btn-clear": "Clear",
   "btc.table-time": "Time",
-  "btc.table-price": "Price",
+  "btc.table-price": "Price (USDT)",
   "btc.table-volume": "Volume"
 }
