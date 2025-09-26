@@ -56,4 +56,17 @@ export class TransactionService {
       return true;
     });
   }
+
+  lastFiveTotalsByDate() {
+    const grouped: Record<string, number> = {};
+    for (const t of this._transactions()) {
+      const date = t.date.slice(0, 10);
+      grouped[date] = (grouped[date] ?? 0) + t.amount;
+    }
+    const sortedDates = Object.keys(grouped).sort((a, b) => b.localeCompare(a));
+    return sortedDates.slice(0, 5).map((date) => ({
+      date,
+      total: grouped[date],
+    }));
+  }
 }

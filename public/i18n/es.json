@@ -30,5 +30,6 @@
   "history.filter-btn-clear": "Limpiar",
   "btc.table-time": "Hora",
   "btc.table-price": "Precio (USDT)",
-  "btc.table-volume": "Monto"
+  "btc.table-volume": "Monto",
+  "total-chart.title": "Total de transacciones"
 }

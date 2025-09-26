@@ -30,5 +30,6 @@
   "history.filter-btn-clear": "Clear",
   "btc.table-time": "Time",
   "btc.table-price": "Price (USDT)",
-  "btc.table-volume": "Volume"
+  "btc.table-volume": "Volume",
+  "total-chart.title": "Total transactions"
 }

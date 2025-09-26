@@ -32,7 +32,6 @@ export class TransferPanelComponent {
   }
 
   private async init() {
-    await this.accountService.loadAccounts();
     this.accounts = this.accountService.getAll();
   }
 

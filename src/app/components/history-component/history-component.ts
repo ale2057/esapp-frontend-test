@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TransactionService } from '../../services/transaction-service';
 import { DatePipe, DecimalPipe } from '@angular/common';
 import { Transaction } from '../../models/transaction-model';
@@ -13,7 +13,7 @@ import { Account } from '../../models/account-model';
   templateUrl: './history-component.html',
   styleUrl: './history-component.scss',
 })
-export class HistoryComponent {
+export class HistoryComponent implements OnInit {
   today = new Date();
   trCount = 0;
   trAmount = 0;
@@ -27,12 +27,9 @@ export class HistoryComponent {
   constructor(
     private transactionService: TransactionService,
     private accountService: AccountService
-  ) {
-    this.init();
-  }
+  ) {}
 
-  private async init() {
-    await this.accountService.loadAccounts();
+  ngOnInit(): void {
     this.tdTransacions = this.transactionService.todayTransactions();
     this.trAmount = this.transactionService.todayTotal();
     this.trCount = this.tdTransacions.length;
