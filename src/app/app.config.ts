@@ -1,4 +1,5 @@
 import {
+  APP_INITIALIZER,
   ApplicationConfig,
   inject,
   provideAppInitializer,
@@ -12,6 +13,11 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideTranslateService, TranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
+import { AccountService } from './services/account-service';
+
+export function loadAccountsFactory(accountService: AccountService) {
+  return () => accountService.loadAccounts();
+}
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -31,5 +37,11 @@ export const appConfig: ApplicationConfig = {
       translate.use(translate.getBrowserLang() || 'en');
     }),
     provideCharts(withDefaultRegisterables()),
+    {
+      provide: APP_INITIALIZER,
+      useFactory: loadAccountsFactory,
+      deps: [AccountService],
+      multi: true,
+    },
   ],
 };

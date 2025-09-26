@@ -27,4 +27,8 @@ export class AccountService {
   getNameById(id: string) {
     return this.accounts.find((a) => a.id === id)?.ownerName;
   }
+
+  getById(id: string) {
+    return this.accounts.find((a) => a.id === id);
+  }
 }

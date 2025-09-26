@@ -92,4 +92,18 @@ export class TransactionService {
         count: grouped[date],
       }));
   }
+
+  mostActiveAccount(): { accountId: string; count: number } | null {
+    const counts: Record<string, number> = {};
+    for (const t of this._transactions()) {
+      counts[t.srcAccountId] = (counts[t.srcAccountId] ?? 0) + 1;
+      counts[t.trgAccountId] = (counts[t.trgAccountId] ?? 0) + 1;
+    }
+    const entries = Object.entries(counts);
+    if (entries.length === 0) return null;
+    const [accountId, count] = entries.reduce((max, curr) =>
+      curr[1] > max[1] ? curr : max
+    );
+    return { accountId, count };
+  }
 }

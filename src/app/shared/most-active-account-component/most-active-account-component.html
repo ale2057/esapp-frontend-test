@@ -1,0 +1,34 @@
+<div class="card my-3">
+  <div class="card-body">
+    <h3 class="card-title" translate>
+      <i class="bi bi-person-lines-fill"></i> most-active-account.title
+    </h3>
+    <div class="row my-3">
+      <div class="col-md-4 d-flex justify-content-center">
+        <img src="{{ accuntData?.photoUrl }}" class="rounded" />
+      </div>
+      <div class="col-md-8 my-3">
+        <div class="row">
+          <div
+            class="col-md-6 d-flex align-items-center justify-content-center"
+          >
+            <h3>{{ accuntData?.ownerName }}</h3>
+          </div>
+          <div
+            class="col-md-6 flex-column d-flex justify-content-center align-items-center"
+          >
+            <div class="row">
+              <h1>{{ totalMov }}</h1>
+            </div>
+
+            <div class="row">
+              <h4 class="text-body-secondary" translate>
+                most-active-account.total
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

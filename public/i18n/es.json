@@ -32,5 +32,7 @@
   "btc.table-price": "Precio (USDT)",
   "btc.table-volume": "Monto",
   "total-chart.title": "Total de transacciones",
-  "amount-chart.title": "Dinero transferido"
+  "amount-chart.title": "Dinero transferido",
+  "most-active-account.title": "Cuenta más activa",
+  "most-active-account.total": "Rransacciones registradas"
 }
