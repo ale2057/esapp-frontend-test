@@ -1,6 +1,6 @@
 # EsappFrontendTest
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.5.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.5 and [Node](https://www.npmjs.com/package/node/v/22.18.0) version 22.18.0.
 
 ---
 
