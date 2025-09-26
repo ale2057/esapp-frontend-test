@@ -1,4 +1,4 @@
-import { computed, effect, Injectable, signal } from '@angular/core';
+import { effect, Injectable, signal } from '@angular/core';
 import { Transaction } from '../models/transaction-model';
 
 @Injectable({
@@ -6,11 +6,6 @@ import { Transaction } from '../models/transaction-model';
 })
 export class TransactionService {
   private _transactions = signal<Transaction[]>(this.loadFromStorage());
-  transactions = this._transactions;
-  totalAmount = computed(() =>
-    this._transactions().reduce((s, t) => s + t.amount, 0)
-  );
-  totalCount = computed(() => this._transactions().length);
 
   constructor() {
     effect(() => {
@@ -36,12 +31,29 @@ export class TransactionService {
     this._transactions.update((prev) => [...prev, tx]);
   }
 
-  clear() {
-    this._transactions.set([]);
-  }
-
   todayTransactions() {
     const today = new Date().toISOString().slice(0, 10);
     return this._transactions().filter((t) => t.date.slice(0, 10) === today);
+  }
+
+  todayTotal() {
+    return this.todayTransactions().reduce((s, t) => s + t.amount, 0);
+  }
+
+  filterTransactions(opts: {
+    originId?: string;
+    destId?: string;
+    minAmount?: number;
+    maxAmount?: number;
+  }) {
+    return this.todayTransactions().filter((t) => {
+      if (opts.originId && t.srcAccountId !== opts.originId) return false;
+      if (opts.destId && t.trgAccountId !== opts.destId) return false;
+      if (opts.minAmount !== undefined && t.amount < opts.minAmount)
+        return false;
+      if (opts.maxAmount !== undefined && t.amount > opts.maxAmount)
+        return false;
+      return true;
+    });
   }
 }

@@ -23,4 +23,8 @@ export class AccountService {
   getBalanceById(id: string) {
     return this.accounts.find((a) => a.id === id)?.balance;
   }
+
+  getNameById(id: string) {
+    return this.accounts.find((a) => a.id === id)?.ownerName;
+  }
 }

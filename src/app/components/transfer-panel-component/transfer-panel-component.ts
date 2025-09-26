@@ -90,7 +90,7 @@ export class TransferPanelComponent {
       id: uuidv4(),
       srcAccountId: this.srcAccountId,
       trgAccountId: this.trgAccountId,
-      amount: Number(this.amount.toFixed(2)),
+      amount: Number(this.amount),
       date: new Date().toISOString(),
     };
     this.saveTransaction(transaction);

@@ -14,5 +14,18 @@
   "trans-panel.high-amt": "You must enter a value greater than 0.",
   "trans-card.select-lbl-account": "Account",
   "trans-card.select-account": "Select an account",
-  "trans-card.balance": "Balance:"
+  "trans-card.balance": "Balance:",
+  "history.title": "History",
+  "history.number-transactions": "Total transactions:",
+  "history.total-amount": "Total amount:",
+  "history.table-date": "Date",
+  "history.table-source": "Source",
+  "history.table-target": "Target",
+  "history.table-amount": "Amount",
+  "history.filter-source": "Source",
+  "history.filter-target": "Target",
+  "history.filter-sl-all": "-- All --",
+  "history.filter-min-amount": "Min. amount",
+  "history.filter-max-amount": "Max. amount",
+  "history.filter-btn-clear": "Clear"
 }

@@ -1,1 +1,96 @@
-<p>history-component works!</p>
+<div class="row my-3">
+  <h1 translate>history.title</h1>
+  <h5>{{ today | date : "shortDate" }}</h5>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <strong translate>history.number-transactions</strong> {{ trCount }}
+  </div>
+  <div class="col-md-6">
+    <strong translate>history.total-amount</strong>
+    {{ trAmount | number : "1.2-2" }}
+  </div>
+</div>
+
+<div class="row my-5">
+  <div class="col-md-3">
+    <label translate>history.filter-source</label>
+    <select
+      class="form-select"
+      [(ngModel)]="filterOrigin"
+      (change)="applyFilters()"
+    >
+      <option [ngValue]="undefined" translate>history.filter-sl-all</option>
+      @for (item of accounts; track $index) {
+      <option [value]="item.id">{{ item.ownerName }}</option>
+      }
+    </select>
+  </div>
+
+  <div class="col-md-3">
+    <label translate>history.filter-target</label>
+    <select
+      class="form-select"
+      [(ngModel)]="filterDest"
+      (change)="applyFilters()"
+    >
+      <option [ngValue]="undefined" translate>history.filter-sl-all</option>
+      @for (item of accounts; track $index) {
+      <option [value]="item.id">{{ item.ownerName }}</option>
+      }
+    </select>
+  </div>
+
+  <div class="col-md-2">
+    <label translate>history.filter-min-amount</label>
+    <input
+      type="number"
+      class="form-control"
+      [(ngModel)]="filterMin"
+      (input)="applyFilters()"
+    />
+  </div>
+
+  <div class="col-md-2">
+    <label translate>history.filter-max-amount</label>
+    <input
+      type="number"
+      class="form-control"
+      [(ngModel)]="filterMax"
+      (input)="applyFilters()"
+    />
+  </div>
+
+  <div class="col-md-2 d-flex align-items-end">
+    <button class="btn btn-light w-100" (click)="resetFilters()" translate>
+      history.filter-btn-clear
+    </button>
+  </div>
+</div>
+
+<div class="row my-5">
+  <div class="col-md-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th translate>#</th>
+          <th translate>history.table-date</th>
+          <th translate>history.table-source</th>
+          <th translate>history.table-target</th>
+          <th translate>history.table-amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (transaction of tdTransacions; track $index) {
+        <tr>
+          <td>{{ $index + 1 }}</td>
+          <td>{{ transaction.date | date : "short" }}</td>
+          <td>{{ getAccountName(transaction.srcAccountId) }}</td>
+          <td>{{ getAccountName(transaction.trgAccountId) }}</td>
+          <td>{{ transaction.amount | number : "1.2-2" }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

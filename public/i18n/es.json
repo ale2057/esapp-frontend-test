@@ -14,5 +14,18 @@
   "trans-panel.high-amt": "Debe introducir un valor mayor a 0.",
   "trans-card.select-lbl-account": "Cuenta",
   "trans-card.select-account": "Seleccione una cuenta",
-  "trans-card.balance": "Saldo:"
+  "trans-card.balance": "Saldo:",
+  "history.title": "Historial",
+  "history.number-transactions": "Transacciones totales:",
+  "history.total-amount": "Monto total:",
+  "history.table-date": "Fecha",
+  "history.table-source": "Origen",
+  "history.table-target": "Destino",
+  "history.table-amount": "Monto",
+  "history.filter-source": "Origen",
+  "history.filter-target": "Destino",
+  "history.filter-sl-all": "-- Todo --",
+  "history.filter-min-amount": "Monto mínimo",
+  "history.filter-max-amount": "Monto máximo",
+  "history.filter-btn-clear": "Limpiar"
 }
