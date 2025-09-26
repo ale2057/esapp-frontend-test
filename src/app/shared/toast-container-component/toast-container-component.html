@@ -1,0 +1,23 @@
+<div class="toast-container position-fixed top-0 end-0 p-3">
+  @for (toast of toasts; track $index) {
+  <div
+    class="toast show mb-2 align-items-center text-white border-0"
+    [ngClass]="{
+      'bg-success': toast.level === 'success',
+      'bg-warning': toast.level === 'warning',
+      'bg-danger': toast.level === 'danger'
+    }"
+  >
+    <div class="d-flex">
+      <div class="toast-body" translate>
+        {{ toast.message }}
+      </div>
+      <button
+        type="button"
+        class="btn-close btn-close-white me-2 m-auto"
+        (click)="remove(toast.id)"
+      ></button>
+    </div>
+  </div>
+  }
+</div>

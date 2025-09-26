@@ -1,1 +1,18 @@
-{}
+{
+  "trans.nav-bar-title": "Simulador de Transferencias",
+  "trans.nav-bar-home": "Inicio",
+  "trans.nav-bar-history": "Historial",
+  "trans.nav-bar-transfer": "Tansferencia",
+  "trans-panel.title": "Tansferencia",
+  "trans-panel.btn-accept": "Aceptar",
+  "trans-panel.src-title": "Cuenta Origen",
+  "trans-panel.trg-title": "Cuenta Destino",
+  "trans-panel.amount-label": "Monto",
+  "trans-panel.exceed-balance": "El importe ingresado excede el saldo disponible.",
+  "trans-panel.same-account": "Debe seleccionar dos cuentas diferentes.",
+  "trans-panel.success-trans": "Transferencia completada exitosamente.",
+  "trans-panel.high-amt": "Debe introducir un valor mayor a 0.",
+  "trans-card.select-lbl-account": "Cuenta",
+  "trans-card.select-account": "Seleccione una cuenta",
+  "trans-card.balance": "Saldo:"
+}

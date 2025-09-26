@@ -1,8 +1,7 @@
 export interface Transaction {
   id: string;
-  fromAccountId: string;
-  toAccountId: string;
+  srcAccountId: string;
+  trgAccountId: string;
   amount: number;
   date: string;
-  status: 'success' | 'failed' | 'pending';
 }

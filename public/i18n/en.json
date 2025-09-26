@@ -1,1 +1,18 @@
-{}
+{
+  "trans.nav-bar-title": "Transfer Simulator",
+  "trans.nav-bar-home": "Home",
+  "trans.nav-bar-history": "History",
+  "trans.nav-bar-transfer": "Transfer",
+  "trans-panel.title": "Transfer",
+  "trans-panel.btn-accept": "Accept",
+  "trans-panel.src-title": "Source Account",
+  "trans-panel.trg-title": "Target Account",
+  "trans-panel.amount-label": "Amount",
+  "trans-panel.exceed-balance": "The amount entered exceeds the available balance.",
+  "trans-panel.same-account": "You must select two different accounts.",
+  "trans-panel.success-trans": "Transfer completed successfully.",
+  "trans-panel.high-amt": "You must enter a value greater than 0.",
+  "trans-card.select-lbl-account": "Account",
+  "trans-card.select-account": "Select an account",
+  "trans-card.balance": "Balance:"
+}

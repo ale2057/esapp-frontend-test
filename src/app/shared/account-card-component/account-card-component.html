@@ -1,0 +1,47 @@
+<div class="card my-2">
+  <h5 class="card-header" translate>{{ cardTitle }}</h5>
+  <div class="card-body">
+    <div class="mb-3">
+      <label class="form-label" translate>
+        trans-card.select-lbl-account
+      </label>
+      <select
+        class="form-select form-select-sm"
+        [(ngModel)]="selectedAccount"
+        (change)="onAccountChange()"
+      >
+        <option [ngValue]="null" selected translate>
+          trans-card.select-account
+        </option>
+        @for (item of accounts; track item.id) {
+        <option [ngValue]="item">{{ item.ownerName }}</option>
+        }
+      </select>
+    </div>
+    @if (selectedAccount) {
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-center my-3">
+        <img src="{{ selectedAccount.photoUrl }}" class="rounded" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <p>
+          <strong>{{ selectedAccount.ownerName }}</strong>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <p><strong>N°</strong> {{ selectedAccount.number }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          <strong translate>trans-card.balance</strong>
+          {{ selectedAccount.balance | number : "1.2-2" }}
+        </p>
+      </div>
+    </div>
+    }
+  </div>
+</div>
