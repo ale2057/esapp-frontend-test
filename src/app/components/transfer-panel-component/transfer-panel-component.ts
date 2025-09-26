@@ -41,7 +41,7 @@ export class TransferPanelComponent {
       return true;
     }
     if (this.srcAccountId === this.trgAccountId) {
-      this.toastService.warning('trans-panel.duplicate-same', 5000);
+      this.toastService.warning('trans-panel.same-account', 5000);
       return true;
     }
     return false;
@@ -83,7 +83,7 @@ export class TransferPanelComponent {
       return;
     }
     if (this.srcAccountId === this.trgAccountId) {
-      this.toastService.warning('trans-panel.duplicate-same', 5000);
+      this.toastService.warning('trans-panel.same-account', 5000);
       return;
     }
     const transaction: Transaction = {
